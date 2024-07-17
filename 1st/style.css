@@ -1,0 +1,56 @@
+.readBook{
+    color: blue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-div {
+    position: absolute; /* or fixed */
+    top: 40%;
+    left: 30%;
+    right: 30%;
+    width: 40%;
+    background-color: #f8b400;
+    color: white;
+    padding: 10px;
+    z-index: 1000; /* Ensures this div is on top */
+}
+
+.top-div-header{
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+}
+.top-div-body{
+padding: 10px;
+}
+
+.top-div-footer{
+    text-align: right;
+}
+
+.top-div-footer button{
+    border-radius: 5px;
+    border: none;
+    background-color: #f8b400;
+    cursor: pointer;
+}
+
+.top-div-footer .top-div-footer-cencle{
+    color: red;
+}
+
+.top-div-footer .top-div-footer-ok{
+    color: green;
+}
+
+.content-div {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+}

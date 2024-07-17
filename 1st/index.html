@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1ST VIEW JS PAGE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h1>View JS Page</h1>
+    <div id="app">
+        <div v-if="isShow">
+            <h3>{{title}} - {{aurthor}} - {{age}}</h3>
+            <button v-on:click="age++">Increase Age</button>
+            <button v-on:click="age--">Decrease Age</button>
+        </div>
+        <button v-if="isShow" @click="hidebutton">Hide</button>
+        <button v-else @click="showbutton">Show</button>
+    </div>
+
+    <div id="app1">
+        <div>
+            <ol>
+                <li v-for="book in books">
+                    <span :class="{readBook: book.isread}">
+                        <h3>{{book.title}}</h3>
+                        <h4>{{book.aurthor}}</h4>
+                        <h5>{{book.age}}</h5>
+                        <button v-on:click="book.age++">Age ++</button>
+                        <button v-on:click="book.age--">Age --</button>
+                    </span>
+                </li>
+            </ol>
+        </div>        
+    </div>
+
+    <div class="content-div">This is a content div</div>
+    <div class="top-div">
+        <div class="top-div-header">
+            <button>X</button>
+        </div>
+        <div class="top-div-body">
+            MSG
+        </div>
+        <div class="top-div-footer">
+            <button class="top-div-footer-cencle">Test 1</button>
+            <button class="top-div-footer-ok" >Test 2</button>
+        </div>
+    </div>
+    <div class="content-div">This is another content div</div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
